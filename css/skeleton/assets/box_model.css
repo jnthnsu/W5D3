@@ -1,0 +1,117 @@
+/* Introduction to Cascading Style Sheets */
+
+/* Update box_model.css as follows to practice styling with different display and spacing properties.
+
+-Make our list elements in the nav menu into inline-block elements. */
+nav li {
+  display: inline-block;
+}
+/* -Give the links in those list elements a padding on all sides of 20px. By default a tags are inline and cannot have any padding applied to them. Change their display property to correct this default behavior. */
+nav ul a {
+  /* display: block */
+  padding: 20px;
+}
+
+/* -Pick the correct display property to position the nav next to the logo. */
+nav {
+  display: inline-block;
+}
+/* -Set our main content region by giving the body a width of 900px. */
+body {
+  width: 900px
+}
+/* -Use the classic centering trick margin: 0 auto to center the body. */
+body {
+  margin: 0 auto;
+}
+/* -Give the main section a 700px width and the aside a width of 180px. */
+aside {
+  vertical-align: top;
+  width: 180px;
+  margin-right:15px;
+  display: inline-block;
+}
+section {
+  width: 700px;
+  display: inline-block;
+}
+/* -Apply a display property to position the aside and section next to each other. Space them out with a 15px margin-right on the aside. */
+/* -If you find your ingredients list aligned to the bottom use the developer tools to find and correct the styling. */
+/* -Space out the list elements in the ingredients list with a top and bottom margin of 15px. */
+/* -Space out the directions the same way. */
+/* -Use the display property to put input elements on their own row. At this point it probably looks better to remove the "Cooking Expertise" and "Rating" labels. */
+/* -Space out the select element with margin and assign widths to the text input, select, and textarea to finish up our form. */ 
+
+
+body {
+  /* If the user cannot load the Arial font, the sans-serif font is used */
+  font-family: Arial, sans-serif;
+  background-color: #FEFFF1;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+/* This selector selects ALL anchor tag children of ALL list elements that
+are children of an Unordered Lsit element */
+ul li a, figcaption a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* This selector selects only IMMEDIATE (1 level deep) image element children
+of the header element */
+header > img {
+  width: 100px;
+}
+
+/* Selects all elements with the class attribute "ingredients-list" */
+.ingredients-list {
+
+  /* The list style property is shorthand for multiple list-style properties*/
+  list-style: square inside;
+}
+
+ol {
+  list-style: upper-roman inside;
+}
+
+.user_review h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    width: 27px;
+    height: 27px;
+    background-image: url(../assets/stars.png);
+    vertical-align: bottom;
+}
+
+input[type="radio"]:checked {
+  background-position: 30px 30px;
+}
+
+
+input:last-child {
+    background: gold;
+}
+
+input:last-child:hover {
+    -webkit-filter: brightness(90%);
+}
+
+ol li:nth-of-type(2n) {
+  background-color: whitesmoke;
+}
+
+h2 + .user_review {
+    border-top: 1px solid black;
+}
+
